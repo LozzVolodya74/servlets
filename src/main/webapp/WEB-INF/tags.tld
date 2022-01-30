@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<taglib>
+    <tlib-version>l.0</tlib-version>
+    <jsp-version>2.3</jsp-version>
+    <shortname>tags</shortname>
+    <tag>
+        <name>forEach</name>
+        <tag-class>com.learn.tags.MyForEachTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>var</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>items</name>
+            <required>true</required>
+            <type>java.util.List</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>ageTag</name>
+        <tag-class>com.learn.tags.AgeTag</tag-class>
+        <body-content>empty</body-content>
+
+        <attribute>
+            <name>age</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>

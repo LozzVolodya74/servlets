@@ -1,0 +1,17 @@
+person:
+  - id: 1
+    role_id: 1
+    first_name: "Den"
+    last_name: "Brown"
+    login: "den-brown"
+    dob: "1980-08-08"
+    password: "password1"
+    email: "den-brown@gmail.com"
+  - id: 2
+    role_id: 2
+    first_name: "Rob"
+    last_name: "Red"
+    login: "rob-red"
+    dob: "1990-09-09"
+    password: "password2"
+    email: "rob-red@gmail.com"

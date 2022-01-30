@@ -1,0 +1,9 @@
+person:
+  - id: 1
+    role_id: 1
+    first_name: "Den"
+    last_name: "Brown"
+    login: "den-brown"
+    dob: "1980-08-08"
+    password: "password1"
+    email: "den-brown@gmail.com"

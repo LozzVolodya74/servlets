@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+  admin-panel-app:
+    build:
+      context: ./
+      dockerfile: docker/release-app.dockerfile
+    image: release_admin_panel_app:1.0
+    container_name: release_admin_panel_app
+    environment:
+      # Remote debug settings:
+      - JPDA_ADDRESS=8888
+      - JPDA_TRANSPORT=dt_socket
+      - DB_SERVERNAME=admin-panel-db
+    ports:
+      - 8080:8080
+      - 8888:8888
+    networks:
+      - admin-panel-private-network
+    depends_on:
+      - admin-panel-db
+
+  admin-panel-db:
+    build:
+      context: ./
+      dockerfile: docker/release-db.dockerfile
+    image: release_admin_panel_db:1.0
+    container_name: release_admin_panel_db
+    ports:
+      - 5555:5432
+    networks:
+      - admin-panel-private-network
+
+networks:
+  admin-panel-private-network:
+    driver: bridge
